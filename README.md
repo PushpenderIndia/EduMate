@@ -96,7 +96,6 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 - Google Imagen (nano banana) API integration for high-quality visual content generation
 - OpenCV processing for text overlay and comic formatting
 - PDF generation services for downloadable content
-- Google OAuth for authentication
 
 **Step 5: Multi-Step Automated Flow**
 - Complete automated pipeline from educational topic input to finished comic delivery
