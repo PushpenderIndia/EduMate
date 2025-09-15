@@ -28,7 +28,7 @@
   EduMate is a Multi-Step Agentic AI Platform built with TiDB Serverless that transforms educational content into engaging visual comics through intelligent agent workflows and vector search capabilities.
 </p>
 
-## 🤖 Multi-Step Agentic Workflow - Hackathon Requirements Met
+## 🤖 Multi-Step Agentic Workflow
 
 EduMate implements a sophisticated **multi-step agentic AI solution** that chains together multiple building blocks as required by the TiDB AgentX Hackathon:</p>
 
