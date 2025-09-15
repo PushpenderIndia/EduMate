@@ -166,9 +166,173 @@ Our implementation showcases TiDB Serverless's capabilities for agentic applicat
 5. Once the educational comic is ready, users are **redirected to the interactive comic viewer**
 6. The comic viewer provides **options** to **download** content in **PDF format** or **share** the **interactive web link**.
 
-## Agentic System Architecture
+### System Architecture Diagram
 
-![Multi-Agent Architecture Diagram](Demos/Agent_Architecture.png)
+```mermaid
+graph TB
+    %% User Interface Layer
+    subgraph "Frontend Layer"
+        UI[User Interface<br/>HTML/CSS/JS]
+        Auth[Google OAuth<br/>Authentication]
+    end
+
+    %% Application Layer
+    subgraph "Application Layer"
+        Flask[Flask Web Server<br/>REST API]
+        Celery[Celery Worker<br/>Async Task Processing]
+        Redis[(Redis<br/>Message Broker)]
+    end
+
+    %% Multi-Agent System
+    subgraph "Multi-Agent System Core"
+        Orchestrator[MultiStepAgentOrchestrator<br/>Workflow Coordinator]
+
+        subgraph "Specialized Agents"
+            CIA[ContentIntelligenceAgent<br/>Educational Analysis]
+            EPA[EducationalPlanningAgent<br/>Curriculum Alignment]
+            VGA[VisualGenerationAgent<br/>Visual Prompt Creation]
+            QAA[QualityAssuranceAgent<br/>Content Validation]
+        end
+    end
+
+    %% AI Services Layer
+    subgraph "AI Services"
+        GeminiText[Google Gemini 2.0 Flash<br/>Text Generation]
+        GeminiImage[Google Gemini 2.5 Flash<br/>Image Generation]
+        Embeddings[Sentence Transformers<br/>Vector Embeddings]
+    end
+
+    %% Data Layer
+    subgraph "Data Layer"
+        TiDB[(TiDB Serverless<br/>Vector Database)]
+
+        subgraph "Database Tables"
+            EDU[educational_content<br/>Vector Index]
+            COMIC[comic_generations<br/>Status Tracking]
+            AGENT[agent_logs<br/>Execution Logs]
+            CHAR[character_templates<br/>Vector Index]
+        end
+    end
+
+    %% External Services
+    subgraph "External Services"
+        GoogleAPI[Google APIs<br/>Authentication & AI]
+        FileSystem[File System<br/>PDF & Image Storage]
+    end
+
+    %% Data Flow Connections
+    UI --> Flask
+    Auth --> Flask
+    Flask --> Celery
+    Celery --> Redis
+    Celery --> Orchestrator
+
+    %% Agent Workflow
+    Orchestrator --> CIA
+    Orchestrator --> EPA
+    Orchestrator --> VGA
+    Orchestrator --> QAA
+
+    %% Agent to AI Services
+    CIA --> GeminiText
+    CIA --> TiDB
+    EPA --> GeminiText
+    EPA --> TiDB
+    VGA --> GeminiText
+    VGA --> TiDB
+    QAA --> GeminiText
+
+    %% Image Generation Flow
+    VGA --> GeminiImage
+    GeminiImage --> FileSystem
+
+    %% Database Connections
+    CIA --> Embeddings
+    Embeddings --> TiDB
+    TiDB --> EDU
+    TiDB --> COMIC
+    TiDB --> AGENT
+    TiDB --> CHAR
+
+    %% External API Connections
+    GeminiText --> GoogleAPI
+    GeminiImage --> GoogleAPI
+    Auth --> GoogleAPI
+
+    %% Result Flow
+    Orchestrator --> FileSystem
+    FileSystem --> Flask
+    Flask --> UI
+
+    %% Styling
+    classDef userLayer fill:#e1f5fe
+    classDef appLayer fill:#f3e5f5
+    classDef agentLayer fill:#e8f5e8
+    classDef aiLayer fill:#fff3e0
+    classDef dataLayer fill:#fce4ec
+    classDef externalLayer fill:#f1f8e9
+
+    class UI,Auth userLayer
+    class Flask,Celery,Redis appLayer
+    class Orchestrator,CIA,EPA,VGA,QAA agentLayer
+    class GeminiText,GeminiImage,Embeddings aiLayer
+    class TiDB,EDU,COMIC,AGENT,CHAR dataLayer
+    class GoogleAPI,FileSystem externalLayer
+```
+
+### Detailed Component Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Flask
+    participant Celery
+    participant Orchestrator
+    participant CIA as ContentIntelligenceAgent
+    participant EPA as EducationalPlanningAgent
+    participant VGA as VisualGenerationAgent
+    participant QAA as QualityAssuranceAgent
+    participant Gemini as Gemini API
+    participant TiDB
+    participant ImageGen as Image Generation
+
+    User->>Flask: Submit Comic Request
+    Flask->>Celery: Queue Generation Task
+    Celery->>Orchestrator: Execute Workflow
+
+    Note over Orchestrator: Step 1: Content Analysis
+    Orchestrator->>CIA: Analyze Educational Topic
+    CIA->>TiDB: Search Similar Content
+    CIA->>Gemini: Generate Educational Content
+    CIA->>TiDB: Store Content & Log
+    CIA-->>Orchestrator: Content Analysis Result
+
+    Note over Orchestrator: Step 2: Educational Planning
+    Orchestrator->>EPA: Plan Learning Objectives
+    EPA->>TiDB: Query Curriculum Standards
+    EPA->>Gemini: Align with Standards
+    EPA->>TiDB: Log Planning Result
+    EPA-->>Orchestrator: Planning Result
+
+    Note over Orchestrator: Step 3: Visual Generation
+    Orchestrator->>VGA: Generate Visual Prompts
+    VGA->>TiDB: Search Character Templates
+    VGA->>Gemini: Create Visual Prompts
+    VGA->>ImageGen: Generate Images
+    VGA->>TiDB: Log Visual Generation
+    VGA-->>Orchestrator: Visual Assets
+
+    Note over Orchestrator: Step 4: Quality Assurance
+    Orchestrator->>QAA: Validate Content Quality
+    QAA->>Gemini: Analyze Content Quality
+    QAA->>TiDB: Log QA Results
+    QAA-->>Orchestrator: Quality Report
+
+    Orchestrator->>TiDB: Update Generation Status
+    Orchestrator-->>Celery: Complete Task
+    Celery-->>Flask: Return Result
+    Flask-->>User: Comic Generated Successfully
+```
 
 # Technology Stack 🛠️    
 
