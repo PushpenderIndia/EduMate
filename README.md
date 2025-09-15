@@ -465,9 +465,9 @@ celery -A app.celery worker --loglevel=info
 
 ## TiDB AgentX Hackathon Submission Summary
 
-**Project**: EduMate - Multi-Step Agentic Educational Platform  
-**TiDB Cloud Email**: `singhpushpender6387@gmail.com`
-**Repository**: https://github.com/pushpenderindia/EduMate (Public OSI License)  
+- **Project**: EduMate - Multi-Step Agentic Educational Platform  
+- **TiDB Cloud Email**: `singhpushpender6387@gmail.com`
+- **Repository**: https://github.com/pushpenderindia/EduMate (Public OSI License)  
 
 **Data Flow**: Educational Content Input → TiDB Vector Search → Multi-Agent Processing → Visual Generation → Automated Assembly → Final Delivery
 
