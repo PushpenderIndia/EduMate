@@ -36,7 +36,7 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 
 - Click on this below image for playing video
 
-[![IMAGE_ALT](https://img.youtube.com/vi/DWEAnfSkJKM/0.jpg)](https://youtu.be/DWEAnfSkJKM)
+[![IMAGE_ALT](https://img.youtube.com/vi/xo5DUok7jGQ/0.jpg)](https://youtu.be/xo5DUok7jGQ)
 
 ### Agentic Workflow Architecture
 
