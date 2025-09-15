@@ -463,7 +463,7 @@ celery -A app.celery worker --loglevel=info
 
 ---
 
-## 🏆TiDB AgentX Hackathon Submission Summary
+## TiDB AgentX Hackathon Submission Summary
 
 **Project**: EduMate - Multi-Step Agentic Educational Platform  
 **TiDB Cloud Email**: `singhpushpender6387@gmail.com`
