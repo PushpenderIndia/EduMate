@@ -30,42 +30,13 @@
 
 ## Multi-Step Agentic Workflow
 
-EduMate implements a sophisticated **multi-step agentic AI solution** that chains together multiple building blocks as required by the TiDB AgentX Hackathon:</p>
+EduMate implements a sophisticated **multi-step agentic AI solution** that chains together multiple building blocks:</p>
 
 ## Project Demonstration
 
 - Click on this below image for playing video
 
 [![IMAGE_ALT](https://img.youtube.com/vi/xo5DUok7jGQ/0.jpg)](https://youtu.be/xo5DUok7jGQ)
-
-### Agentic Workflow Architecture
-
-**Step 1: Ingest & Index Data**
-- Educational content, curriculum standards, and comic templates are ingested into TiDB Serverless
-- Vector embeddings are generated and stored using TiDB's vector search capabilities
-- Full-text indexing of educational materials for content retrieval
-
-**Step 2: Search Your Data** 
-- Agent queries TiDB vector indexes to find relevant educational content and similar comic styles
-- Full-text search retrieves curriculum-aligned materials and character templates
-- Hybrid search combines vector and traditional search for optimal content matching
-
-**Step 3: Chain LLM Calls (Multi-Agent System)**
-- **Content Planning Agent**: Analyzes educational requirements using Gemini 2.0 Flash
-- **Dialogue Generation Agent**: Creates age-appropriate comic conversations
-- **Visual Prompt Agent**: Generates detailed scene descriptions for image generation
-- **Quality Assurance Agent**: Reviews content for educational standards compliance
-
-**Step 4: Invoke External Tools**
-- Google Imagen (nano banana) API integration for high-quality visual content generation
-- OpenCV processing for text overlay and comic formatting
-- PDF generation services for downloadable content
-- Google OAuth for authentication
-
-**Step 5: Multi-Step Automated Flow**
-- Complete automated pipeline from educational topic input to finished comic delivery
-- Real-time progress tracking via TiDB Serverless database
-- Intelligent caching and retrieval optimization
 
 ## Educational Challenge
 - Modern students struggle with `declining attention spans` that impact learning effectiveness:
@@ -102,6 +73,35 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 1. [Dragon Tale](/static/pdfs/dragon_tale.pdf)
 2. [Vampire Story](/static/pdfs/vampire_story.pdf)
 3. [Naturo preparing for exam](/static/pdfs/naruto_preparing_for_exams_.pdf)
+
+### Agentic Workflow Architecture
+
+**Step 1: Ingest & Index Data**
+- Educational content, curriculum standards, and comic templates are ingested into TiDB Serverless
+- Vector embeddings are generated and stored using TiDB's vector search capabilities
+- Full-text indexing of educational materials for content retrieval
+
+**Step 2: Search Your Data** 
+- Agent queries TiDB vector indexes to find relevant educational content and similar comic styles
+- Full-text search retrieves curriculum-aligned materials and character templates
+- Hybrid search combines vector and traditional search for optimal content matching
+
+**Step 3: Chain LLM Calls (Multi-Agent System)**
+- **Content Planning Agent**: Analyzes educational requirements using Gemini 2.0 Flash
+- **Dialogue Generation Agent**: Creates age-appropriate comic conversations
+- **Visual Prompt Agent**: Generates detailed scene descriptions for image generation
+- **Quality Assurance Agent**: Reviews content for educational standards compliance
+
+**Step 4: Invoke External Tools**
+- Google Imagen (nano banana) API integration for high-quality visual content generation
+- OpenCV processing for text overlay and comic formatting
+- PDF generation services for downloadable content
+- Google OAuth for authentication
+
+**Step 5: Multi-Step Automated Flow**
+- Complete automated pipeline from educational topic input to finished comic delivery
+- Real-time progress tracking via TiDB Serverless database
+- Intelligent caching and retrieval optimization
 
 # EduMate: Multi-Agent System Components
 
