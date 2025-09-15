@@ -32,6 +32,12 @@
 
 EduMate implements a sophisticated **multi-step agentic AI solution** that chains together multiple building blocks as required by the TiDB AgentX Hackathon:</p>
 
+## Project Demonstration
+
+- Click on this below image for playing video
+
+[![IMAGE_ALT](https://img.youtube.com/vi/DWEAnfSkJKM/0.jpg)](https://youtu.be/DWEAnfSkJKM)
+
 ### 🎯 Agentic Workflow Architecture
 
 **Step 1: Ingest & Index Data**
@@ -60,12 +66,6 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 - Complete automated pipeline from educational topic input to finished comic delivery
 - Real-time progress tracking via TiDB Serverless database
 - Intelligent caching and retrieval optimization
-
-# Project Demonstration
-
-- Click on this below image for playing video
-
-[![IMAGE_ALT](https://img.youtube.com/vi/DWEAnfSkJKM/0.jpg)](https://youtu.be/DWEAnfSkJKM)
 
 ## Educational Challenge
 - Modern students struggle with `declining attention spans` that impact learning effectiveness:
@@ -99,9 +99,9 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 - [X] Multi-language support for diverse educational environments (English/Hindi/Tamil/etc.)
 
 ## Sample Educational Comics Generated
-1. [Science Adventure Tale](/static/pdfs/science_adventure.pdf)
-2. [History Explorer Story](/static/pdfs/history_explorer.pdf)
-3. [Math Hero's Journey](/static/pdfs/math_hero_journey.pdf)
+1. [Dragon Tale](/static/pdfs/dragon_tale.pdf)
+2. [Vampire Story](/static/pdfs/vampire_story.pdf)
+3. [Naturo preparing for exam](/static/pdfs/naruto_preparing_for_exams_.pdf)
 
 # EduMate: Multi-Agent System Components
 
