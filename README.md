@@ -425,7 +425,8 @@ pip3 install -r requirements.txt
 # Configure Environment Variables with your credentials
 echo "GEMINI_API_KEY=your_gemini_api_key
 TIDB_SERVERLESS_HOST=your_tidb_serverless_host
-TIDB_SERVERLESS_USER=your_tidb_serverless_username  
+TIDB_SERVERLESS_USER=your_tidb_serverless_username 
+TIDB_SERVERLESS_PORT=4000 
 TIDB_SERVERLESS_PASSWORD=your_tidb_serverless_password
 TIDB_SERVERLESS_DATABASE=your_tidb_serverless_database
 TIDB_CLOUD_EMAIL=hackathon_submission_email@domain.com" > .env
