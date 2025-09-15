@@ -24,11 +24,11 @@
 </p>
 
 <p align="center">
-  <strong>🏆 TiDB AgentX Hackathon 2025 Submission</strong><br>
+  <strong>TiDB AgentX Hackathon 2025 Submission</strong><br>
   EduMate is a Multi-Step Agentic AI Platform built with TiDB Serverless that transforms educational content into engaging visual comics through intelligent agent workflows and vector search capabilities.
 </p>
 
-## 🤖 Multi-Step Agentic Workflow
+## Multi-Step Agentic Workflow
 
 EduMate implements a sophisticated **multi-step agentic AI solution** that chains together multiple building blocks as required by the TiDB AgentX Hackathon:</p>
 
@@ -38,7 +38,7 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 
 [![IMAGE_ALT](https://img.youtube.com/vi/DWEAnfSkJKM/0.jpg)](https://youtu.be/DWEAnfSkJKM)
 
-### 🎯 Agentic Workflow Architecture
+### Agentic Workflow Architecture
 
 **Step 1: Ingest & Index Data**
 - Educational content, curriculum standards, and comic templates are ingested into TiDB Serverless
@@ -105,13 +105,13 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 
 # EduMate: Multi-Agent System Components
 
-1. [Content Intelligence Agent 🧠](#Content-Intelligence-Agent)
-2. [Visual Generation Agent 🎨](#Visual-Generation-Agent)
-3. [Quality Assurance Agent ✅](#Quality-Assurance-Agent)
-4. [TiDB Vector Search Integration 🔍](#TiDB-Vector-Search)
+1. [Content Intelligence Agent](#Content-Intelligence-Agent)
+2. [Visual Generation Agent](#Visual-Generation-Agent)
+3. [Quality Assurance Agent](#Quality-Assurance-Agent)
+4. [TiDB Vector Search Integration](#TiDB-Vector-Search)
 
 <a name="Content-Intelligence-Agent"></a>
-## Content Intelligence Agent 🧠
+## Content Intelligence Agent 
 
 - This specialized agent leverages Google's Gemini 2.0 Flash API with advanced chain-of-thought processing for educational content analysis and generation.
 - The agent performs multi-step reasoning: content analysis → educational alignment → age-appropriateness validation → dialogue creation
@@ -119,7 +119,7 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 - Implements intelligent prompt engineering with context-aware educational content generation
 
 <a name="Visual-Generation-Agent"></a>
-## Visual Generation Agent 🎨
+## Visual Generation Agent 
 
 - This agent orchestrates the visual content creation pipeline using chained LLM calls and external tool integration.
 - Performs sequential processing: scene analysis → visual prompt generation → style adaptation → quality validation
@@ -127,7 +127,7 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 - Coordinates with Google Imagen (nano banana) API and OpenCV processing through automated workflows
 
 <a name="Quality-Assurance-Agent"></a>
-## Quality Assurance Agent ✅
+## Quality Assurance Agent 
 
 - Educational compliance validation agent ensuring content meets curriculum standards and age-appropriateness
 - Multi-step verification process: content review → educational value assessment → cultural sensitivity check
@@ -135,7 +135,7 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 - Implements feedback loops for continuous content improvement
 
 <a name="TiDB-Vector-Search"></a>
-## TiDB Vector Search Integration 🔍
+## TiDB Vector Search Integration 
 
 - Advanced vector database implementation for intelligent content matching and retrieval
 - Stores educational content embeddings, comic style vectors, and character template embeddings
@@ -145,7 +145,7 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 ### TiDB Database
 ![TiDB Database Setup](Demos/tidb.png)
 
-# Multi-Agent System with TiDB Serverless 🌐💻
+# Multi-Agent System with TiDB Serverless 
 
 EduMate demonstrates advanced agentic AI capabilities through its multi-agent architecture built on TiDB Serverless infrastructure. Our system showcases real-world workflow automation by chaining together specialized AI agents:
 
@@ -157,7 +157,7 @@ EduMate demonstrates advanced agentic AI capabilities through its multi-agent ar
 
 Our implementation showcases TiDB Serverless's capabilities for agentic applications, demonstrating how distributed database technology can power sophisticated multi-agent workflows that deliver measurable educational outcomes.
 
-# System Workflow 🔄📊
+# System Workflow
 
 1. Users authenticate through **Google OAuth** and access the main educational dashboard.
 2. Users input **Educational Topic**(required), **Visual Style**(optional), **Learning Objectives**(optional) & **Character Preferences** (optional).
@@ -334,7 +334,7 @@ sequenceDiagram
     Flask-->>User: Comic Generated Successfully
 ```
 
-# Technology Stack 🛠️    
+# Technology Stack    
 
 1. **TiDB Serverless:** Core distributed database providing vector search, full-text indexing, and real-time caching for our multi-agent system. Enables intelligent content matching and sub-second response times.
 
@@ -356,7 +356,7 @@ sequenceDiagram
     - **Celery:** Asynchronous task processing for multi-agent workflows (30+ second processing chains)
     - **Redis:** Message broker and additional caching layer for real-time progress tracking across agent interactions
 
-# Multi-Agent Development Workflow 🛠️👷‍♂️
+# Multi-Agent Development Workflow
 
 ## Agentic Processing Pipeline
 
