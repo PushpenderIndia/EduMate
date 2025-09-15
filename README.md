@@ -61,27 +61,11 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 - Real-time progress tracking via TiDB Serverless database
 - Intelligent caching and retrieval optimization
 
-## 🏆 Why EduMate Wins the TiDB AgentX Hackathon
-
-### ✅ **Requirements Fulfillment**
-- **Multi-Step Agentic Solution**: ✅ Implements 5+ chained automated steps
-- **TiDB Serverless Integration**: ✅ Core database with vector search capabilities  
-- **Real-World Workflow**: ✅ Addresses actual educational challenges with measurable impact
-- **Beyond Simple RAG**: ✅ Complex multi-agent system with external tool integration
-- **Innovative Application**: ✅ Novel approach to educational content transformation
-
-### 🚀 **Competitive Advantages**
-1. **Advanced Agent Architecture**: Multi-agent system with specialized roles and chain-of-thought processing
-2. **TiDB Vector Search**: Leverages advanced vector capabilities for intelligent content matching
-3. **Real-World Impact**: Solves genuine educational accessibility problems
-4. **Scalable Solution**: Built for production deployment with performance optimization
-5. **Open Source**: Full transparency with OSI-approved licensing
-
 # Project Demonstration
 
 - Click on this below image for playing video
 
-[![IMAGE_ALT](https://img.youtube.com/vi/LB1D9HrvEZo/0.jpg)](https://youtu.be/LB1D9HrvEZo)
+[![IMAGE_ALT](https://img.youtube.com/vi/DWEAnfSkJKM/0.jpg)](https://youtu.be/DWEAnfSkJKM)
 
 ## Educational Challenge
 - Modern students struggle with `declining attention spans` that impact learning effectiveness:
