@@ -459,4 +459,4 @@ celery -A app.celery worker --loglevel=info
 
 **Multi-Step Workflow**: 6 specialized AI agents orchestrating educational content transformation through automated pipeline processing
 
-*Built for TiDB AgentX Hackathon 2025 - Demonstrating Real-World Agentic AI Impact*
+*Built for TiDB AgentX Hackathon 2025*
