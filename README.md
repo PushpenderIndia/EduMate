@@ -60,7 +60,7 @@ EduMate implements a sophisticated **multi-step agentic AI solution** that chain
 
 - Our platform integrates Google's Gemini 2.0 Flash for advanced text processing and educational content generation, combined with `Google Imagen (nano banana)` for `high-quality text-to-image conversion`.
 
-- We've engineered our system to `generate complete educational comics within 30-50 seconds` through `multi threading`,  `multi-agent coordination`, `TiDB Serverless caching`, and `intelligent workflow orchestration`.
+- We've engineered our system to `generate complete educational comics within 30-50 seconds` through `multi threading`, `celery background worker with redis`, `multi-agent coordination`, `TiDB Serverless caching`, and `intelligent workflow orchestration`.
 
 ## Platform Features
 - [X] Generate content in multiple visual styles (superhero, manga, graphic novel, etc.)
